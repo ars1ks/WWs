@@ -31,13 +31,6 @@ Copy
 
 ## 🚀 Quick Start
 
-### Installation
-```bash
-git clone https://github.com/yourusername/hexcrypt.git
-cd hexcrypt
-Usage
-python
-Copy
 # Encrypt
 shift = 5
 key = ";@HPD7*NON42?:WJ!OKJ"
