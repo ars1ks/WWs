@@ -52,7 +52,7 @@ def encrypt_message(message, mapping):
 
 def main():
     shift = int(input("Введите сдвиг (например, 5): ").strip())
-    key = ""
+    key = input("Введите используемый ключ: ".strip())
     print(f"Используемый ключ: {key}")
     
     mapping = create_hex_mapping(shift, key)

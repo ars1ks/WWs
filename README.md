@@ -32,21 +32,43 @@ Message Length	Encryption Time	Decryption Time
 100 chars	         1.2 ms	       0.8 ms
 10,000 chars	      110 ms	       95 ms
 
-## 🚀 Quick Start
+# 🚀 Quick Start
 
-# Encrypt
-shift = 5
-key = ";@HPD7*NON42?:WJ!OKJ"
-mapping = create_hex_mapping(shift, key)
-encrypted = encrypt_message("HELLO WORLD", mapping)  # ➔ "0A1B2C3D"
+### Generate a key
+- Run key.py
+```bash
+python key.py
+```
 
-# Decrypt
-decrypted = decrypt_message("0A1B2C3D", mapping)    # ➔ "HELLO WORLD"
-🔍 Security Analysis
-✅ Strengths
-Key-Dependent — Unique mapping per key.
+- Copy key hash
 
-Reproducible — Same key → same grid.
+### Encrypt
+- Run encoder.py
+```bash
+python encoder.py
+```
+
+- Enter shift, key, and message
+
+```
+Сообщение: test 
+ 11524B11
+```
+
+- Copy encoded message
+
+### Decrypt
+- Run decryptor.py
+```bash
+python decryptor.py
+```
+
+```
+Введите зашифрованное сообщение: 12382F3019
+Расшифрованное сообщение: @LОK7
+```
+
+- Enter shift, key, and encrypted message
 
 ⚠️ Weaknesses
 ~~Brute-Force Vulnerable~~ — Only 256 possible shifts.
